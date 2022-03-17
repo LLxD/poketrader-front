@@ -31,7 +31,7 @@ const FetchPokemon = () => {
 
   const loadPokemons = () => {
     axios
-      .get(import.meta.env.URL, {
+      .get(import.meta.env.VITE_URL, {
         headers: { "Content-Type": "application/json" },
       })
       .then(function (response) {
