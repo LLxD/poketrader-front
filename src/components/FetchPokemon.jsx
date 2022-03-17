@@ -45,7 +45,7 @@ const FetchPokemon = () => {
   const sendToDatabase = () => {
     axios
       .post(
-        import.meta.env.URL + "/addTrade",
+        import.meta.env.VITE_URL + "/addTrade",
         {
           pokemons_side_A: tradeAreaA,
           pokemons_side_B: tradeAreaB,

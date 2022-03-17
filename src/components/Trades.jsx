@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Trades = () => {
   const [tradesArray, setTradesArray] = useState([]);
   axios
-    .get(import.meta.env.URL + "/allTrades", {
+    .get(import.meta.env.VITE_URL + "/allTrades", {
       headers: { "Content-Type": "application/json" },
     })
     .then(function (response) {
