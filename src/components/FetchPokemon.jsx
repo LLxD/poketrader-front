@@ -31,7 +31,7 @@ const FetchPokemon = () => {
 
   const loadPokemons = () => {
     axios
-      .get("http://localhost:5000", {
+      .get(import.meta.env.URL, {
         headers: { "Content-Type": "application/json" },
       })
       .then(function (response) {
@@ -45,7 +45,7 @@ const FetchPokemon = () => {
   const sendToDatabase = () => {
     axios
       .post(
-        "http://localhost:5000/addTrade",
+        import.meta.env.URL + "/addTrade",
         {
           pokemons_side_A: tradeAreaA,
           pokemons_side_B: tradeAreaB,
